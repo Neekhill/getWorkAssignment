@@ -51,6 +51,10 @@ function App() {
       //console.log(dataFetched);
     }
   };
+
+  const openChatFn = () => {
+    window?.Wotnot?.open();
+  };
   return (
     <div className="App">
       {/******************* randering the checkbox form ************************/}
@@ -115,6 +119,11 @@ function App() {
             })
           );
         })}
+
+        <br></br>
+        <br></br>
+
+        <button onClick={openChatFn}>Open Chat</button>
       </div>
     </div>
   );
