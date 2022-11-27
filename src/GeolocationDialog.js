@@ -41,8 +41,8 @@ export default function GeolocationDialog({
   const [maxWidth, setMaxWidth] = React.useState("xs");
   const [address, setAddress] = useState();
   const [coordinates, setCoordinates] = useState({
-    lat: null,
-    lon: null,
+    lat: null /* 28.520072 */,
+    lon: null /* 77.2010112 */,
   });
 
   //   const handleSelect = async (value) => {
@@ -194,7 +194,11 @@ export default function GeolocationDialog({
               <Box sx={{ mt: 3 }}>
                 {/* <img src={Map} style={{ width: "100%" }} /> */}
                 <iframe
-                  src={`https://maps.google.com/maps?q=28.520072,77.2010112&z=15&output=embed`}
+                  src={`https://maps.google.com/maps?q=${
+                    coordinates?.lat ? coordinates?.lat : "11.34567"
+                  },${
+                    coordinates?.lan ? coordinates?.lan : "22.4356"
+                  }&z=15&output=embed`}
                   width="100%"
                   height="270"
                   frameborder="0"
