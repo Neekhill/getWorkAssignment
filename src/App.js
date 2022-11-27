@@ -2,6 +2,7 @@ import { data } from "./data";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import "./App.css";
+import GeolocationDialog from "./GeolocationDialog";
 
 function App() {
   //state to store the data
@@ -122,7 +123,7 @@ function App() {
 
         <br></br>
         <br></br>
-
+        <GeolocationDialog />
         <button onClick={openChatFn}>Open Chat</button>
       </div>
     </div>
